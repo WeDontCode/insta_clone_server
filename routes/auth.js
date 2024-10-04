@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const User = mongoose.model("User");
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { JWT_SECRET } = require('../keys');
+const { JWT_SECRET } = require('../config/keys');
 const requireLogin = require('../middleware/requireLogin')
 
 // token confirmation navigation route
@@ -14,7 +14,7 @@ const requireLogin = require('../middleware/requireLogin')
 
 // Signup route
 router.post('/signup', (req, res) => {
-    const { name, email, password } = req.body;
+    const { name, email, password,pic } = req.body;
 
     // Check for missing fields
     if (!email || !password || !name) {
@@ -34,7 +34,8 @@ router.post('/signup', (req, res) => {
                     const user = new User({
                         email,
                         password: hashedPassword,
-                        name
+                        name,
+                        pic
                     });
 
                     // Save user to the database

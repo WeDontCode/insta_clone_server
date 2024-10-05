@@ -1,2 +1,24 @@
+# Local development config
 dev.js
+
+# Dependencies
 node_modules/
+
+# Logs
+logs/
+*.log
+
+# Build outputs
+/build
+/dist
+
+# Environment variables
+.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.tmp
+*.temp

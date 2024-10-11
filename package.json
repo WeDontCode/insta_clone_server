@@ -1,21 +1,20 @@
 {
-    "name": "server",
-    "version": "1.0.0",
-    "description": "",
-    "main": "app.js",
-    "scripts": {
-      "start": "node app.js",
-      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
-    },
-    "dependencies": {
-      "bcryptjs": "^2.4.3",
-      "express": "^4.21.0",
-      "jsonwebtoken": "^9.0.2",
-      "mongoose": "^8.7.0"
-    },
-    "engines": {
-      "node": "20.x",
-      "npm": "10.x"
-    }
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.0"
+  },
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
   }
-  
+}
